@@ -1,0 +1,70 @@
+#summary One-sentence summary of this page.
+#labels example,movico
+
+In this simple example we'll create a simple view containing an input field and a button. When a user enters his/her name into the field and presses the button, the page will display "Hello" followed by the just entered username.
+
+= Create the view =
+
+A view in Movico is like a JSP page in JSF. In Movico, it is a strict XML file that is validated by a DTD. This is the view for our sample application (it is called {{{view.xml}}} in the source code):
+
+{{{
+<?xml version="1.0"?>
+<!DOCTYPE note SYSTEM "http://php-movico.googlecode.com/svn/trunk/php-movico/dtd/view.dtd">
+<view>
+    <outputText value="HelloBean_message"/>
+    <form>
+        <inputText value="HelloBean_name"/>
+        <commandButton action="HelloBean_sayHello" value="Say Hello!"/>
+    </form>
+</view>
+}}}
+
+Every view should have the {{{<view>}}} element as a root element. Inside it we created an {{{outputText}}} element with a {{{value}}} attribute that binds to the {{{name}}} field on the {{{HelloBean}}} managed bean.
+
+Next we defined a {{{<form>}}} element containing an {{{inputText}}} and a {{{commandButton}}}. The {{{inputText}}} binds to the bean's {{{name}}} field while the {{{commandButton}}} will execute the {{{sayHello}}} action method on the bean.
+
+This should all look very familiar if you know the basics of JSF. 
+
+= Create the HelloBean =
+
+We know from the view that our managed bean should hold a field {{{name}}} (with its getter and setter) that will bind to the input field, and a {{{message}}} field that is to be displayed in the {{{outputText}}} of the view.
+
+The action method {{{sayHello}}} appends the entered name to the {{{"Hello"}}} string and assigns this value to {{{message}}}.
+
+{{{
+<?php
+class HelloBean {
+	
+    private $name;
+    private $message;
+
+    public function sayHello() {
+        $this->message = $this->comments.", ".$this->name."!";
+        return "view";
+    }
+	
+    public function getName() {
+        return $this->name;
+    }
+	
+    public function setName($name) {
+        $this->name = $name;
+    }
+	
+    public function getMessage() {
+        return $this->message;
+    }
+	
+}
+?>
+}}}
+
+At last the method returns "{{{view}}}", which is the view (without the {{{.xml}}}) to navigate to after this method has been executed. In this case it is the same view we came from.
+
+= Next... =
+
+Ehm, no next. This is all you need for a working Movico application! Notice that:
+ * By only programming for 2 minutes you already have (admit it) an awesome application
+ * You don't have to learn new components because they all are JSF standard components
+ * You're programming your beans in 100% OOP
+ * You didn't do anything database related yet... Check the [Service Builder] for that
