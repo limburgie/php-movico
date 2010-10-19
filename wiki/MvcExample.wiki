@@ -1,4 +1,4 @@
-#summary One-sentence summary of this page.
+#summary Simple example demonstrating MVC in Movico
 #labels example,movico
 
 In this simple example we'll create a simple view containing an input field and a button. When a user enters his/her name into the field and presses the button, the page will display "Hello" followed by the just entered username.
