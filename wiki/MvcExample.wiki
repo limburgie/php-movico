@@ -3,6 +3,9 @@
 
 In this simple example we'll create a simple view containing an input field and a button. When a user enters his/her name into the field and presses the button, the page will display "Hello" followed by the just entered username.
 
+[http://php-movico.googlecode.com/files/movico-1.png]
+[http://php-movico.googlecode.com/files/movico-2.png]
+
 = Create the view =
 
 A view in Movico is like a JSP page in JSF. In Movico, it is a strict XML file that is validated by a DTD. This is the view for our sample application (it is called {{{view.xml}}} in the source code):
