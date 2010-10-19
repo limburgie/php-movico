@@ -36,7 +36,7 @@ The action method {{{sayHello}}} appends the entered name to the {{{"Hello"}}} s
 
 {{{
 <?php
-class HelloBean {
+class HelloBean extends RequestBean {
 	
     private $name;
     private $message;
@@ -63,6 +63,8 @@ class HelloBean {
 }}}
 
 At last the method returns "{{{view}}}", which is the view (without the {{{.xml}}}) to navigate to after this method has been executed. In this case it is the same view we came from.
+
+Note that our bean extends {{{RequestBean}}}. This means that the bean will be in request scope so it will lose its values in between subsequent requests.
 
 = Next... =
 
