@@ -39,7 +39,7 @@ class HelloBean {
     private $message;
 
     public function sayHello() {
-        $this->message = $this->comments.", ".$this->name."!";
+        $this->message = "Hello, ".$this->name."!";
         return "view";
     }
 	
