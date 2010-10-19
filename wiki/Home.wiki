@@ -2,11 +2,11 @@
 
 = Introduction =
 
-What is Movico?
+Movico is a MVC framework for PHP supporting:
+ * Service Builder to generate models and finder services based on an entity definition file
+ * JSF-like managed beans with managed properties and action methods
+ * JSF-like views with JSF-like components (inputText, dataTable, ...)
 
-= Details =
+= Example =
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+See the [example] for a quick view on the capabilities of Movico.
