@@ -9,4 +9,4 @@ Movico is a MVC framework for PHP supporting:
 
 = Example =
 
-See the [example] for a quick view on the capabilities of Movico.
+See the [Example] for a quick view on the capabilities of Movico.
