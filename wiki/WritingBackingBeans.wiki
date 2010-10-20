@@ -4,4 +4,39 @@
 
 A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}} or {{{SessionBean}}}. It contains properties that can map to UI components in the views you create.
 
-Suppose your view contains a simple input field. 
+== Example ==
+
+Suppose your view contains a simple input field. When a user enters a value and submits, we want this value to be available on the Backing Bean. Similarly, when we assign a value to the field on the Backing Bean, we want the input field to show that value to the user.
+
+For this to happen we need a field on the Backing Bean and a public getter and setter to access this field from the outside. The Movico Controller will get and set the right values for us, we only need to supply the accessor methods. Our bean now looks like this:
+
+{{{
+<?
+class UserBean extends RequestBean {
+
+    private $name;
+
+    public function getName() {
+        return $this->name;
+    }
+
+    public function setName($name) {
+        $this->name = $name;
+    }
+
+}
+?>
+}}}
+
+Our view looks like this:
+{{{
+<view>
+    <inputText value="UserBean_name"/>
+</view>
+}}}
+
+In this case, the {{{inputText}}} component binds to the {{{name}}} field on the {{{UserBean}}}.
+
+= Differences with JSF =
+
+Instead of the Expression Language syntax JSF uses, We just apply a string value to our components.
