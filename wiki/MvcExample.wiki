@@ -66,10 +66,15 @@ At last the method returns "{{{view}}}", which is the view (without the {{{.xml}
 
 Note that our bean extends {{{RequestBean}}}. This means that the bean will be in request scope so it will lose its values in between subsequent requests.
 
-= Next... =
+= That's it! =
 
-Ehm, no next. This is all you need for a working Movico application! Notice that:
+This is all you need for a working Movico application! Notice that:
  * By only programming for 2 minutes you already have (admit it) an awesome application
  * You don't have to learn new components because they all are JSF standard components
- * You're programming your beans in 100% OOP
- * You didn't do anything database related yet... Check the [Service Builder] for that
+ * You're programming your beans in a nice object-oriented way, only exposing attributes you want to expose
+ * You didn't do anything database related yet... Check the [ServiceBuilder] page for that
+
+= Other topics =
+ * [ComponentReference]: overview of the different components you can use in your views and how they are rendered
+ * [WritingBeans]: more information about beans, including scope and managed properties
+ * [ServiceBuilder]: learn how to persist data to a database in no time
