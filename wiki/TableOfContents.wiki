@@ -1,6 +1,6 @@
 = Table of Contents =
 
- # [Home]
-  # Test
-  # Test2
- # [ServiceBuilder]
+ * [Home]
+  * Test
+  * Test2
+ * [ServiceBuilder]
