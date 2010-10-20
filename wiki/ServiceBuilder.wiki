@@ -17,12 +17,26 @@ Below you see an example of an entity class definition.
 }}}
 
 In this example we defined one entity named *User*. It has three fields: *id*, which is the primary key, *firstName* and *lastName*. Let's take a look at what Service Builder generates for us when we invoke it on this file:
+ * *tables.sql*: SQL table creation script
  * *UserModel*: abstract POPO (plain-old PHP object) with getters and setters for all properties
  * *User*: extends UserModel with custom domain object methods
  * *UserPersistence*: low-level CRUD operations implemented as SQL queries
  * *UserServiceBase*: abstract service class with default service methods and finders
  * *UserService*: extends UserServiceBase with custom service methods
  * *UserServiceUtil*: to be called by the developer in Backing Beans
+
+== tables.sql ==
+
+Service Builder creates a MySQL table creation script based on the entities and columns defined.
+
+{{{
+CREATE TABLE `myphpapp_user` (
+    `id` INTEGER unsigned NOT NULL AUTO_INCREMENT,
+    `firstName` VARCHAR(50) NOT NULL,
+    `lastName` VARCHAR(50) NOT NULL,
+    PRIMARY KEY (`id`)
+);
+}}}
 
 == UserModel ==
 
@@ -68,7 +82,7 @@ class User extends UserModel {
 
 == UserPersistence ==
 
-UserPersistence contains the low-level CRUD (create/read/update/delete) operations for the entity. Each persistence class encapsulates a (singleton) DatabaseManager object that is used to run queries against. Persistence classes are the only classes that (should) deal directly with SQL.
+UserPersistence contains the low-level CRUD (create/read/update/delete) operations for the entity. The Persistence abstract superclass encapsulates a (singleton) DatabaseManager object that is used to run queries against. Persistence classes are the only classes that deal directly with SQL. As a developer you will never modify this class, as it gets overwritten each time you run the Service Builder.
 
 {{{
 <?
@@ -92,7 +106,7 @@ class UserPersistence extends Persistence {
 
 == UserServiceBase ==
 
-The UserServiceBase class embeds the accompanying UserPersistence class and passes its calls to that class. The reason for this is for the UserService class (that implements the UserServiceBase class) to use the basic CRUD operations and finders.
+The UserServiceBase class embeds the accompanying UserPersistence class and passes its calls to that class. The reason for this is for the UserService class (that implements the UserServiceBase class) to use the basic CRUD operations and finders. As a developer you will never modify this class, as it gets overwritten each time you run the Service Builder.
 
 {{{
 <?
@@ -133,10 +147,39 @@ class UserService extends UserServiceBase {
 
 In this case we created a custom user creation service that uses the {{{createUser()}}} and {{{updateUser()}}} operations provided by UserServiceBase.
 
+== UserServiceUtil ==
 
-= Details =
+UserServiceUtil provides easy access to the UserService without having to worry about instantiation or singletons. It encapsulates a UserService object and passes all calls to this singleton object. As a developer you will never modify this class, as it gets overwritten each time you run the Service Builder.
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+{{{
+<?
+class UserServiceUtil {
+
+    public static function getUser($pk) {
+        return self::getService()->getUser($pk);
+    }
+
+    // ...
+
+    private static function getService() {
+        return Singleton::create("UserService");
+    }
+
+}
+?>
+}}}
+
+When you've created custom services in UserService and run the Service Builder again, the methods will automatically appear as static methods in UserServiceUtil.
+
+= For the developer =
+
+Implementing all those classes seems like a lot of work, right? Not! If you take another good look at the classes Service Builder generates, there are only _two_ classes that need to be modified by the developer:
+ * *User*: implementing custom functionality on top of those in UserModel
+ * *UserService*: implementing custom service methods on top of those in UserServiceBase
+
+To put it in another way: Service Builder leverages the Movico developer in writing boring code, gaining more time for the more interesting stuff!
+
+= Read more =
+Read about
+ * Finder methods
+ * Other
