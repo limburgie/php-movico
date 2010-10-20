@@ -76,5 +76,5 @@ This is all you need for a working Movico application! Notice that:
 
 = Other topics =
  * [ComponentReference]: overview of the different components you can use in your views and how they are rendered
- * [WritingBeans]: more information about beans, including scope and managed properties
+ * [WritingBackingBeans]: more information about beans, including scope and managed properties
  * [ServiceBuilder]: learn how to persist data to a database in no time
