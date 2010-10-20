@@ -1,0 +1,4 @@
+#summary Overview of components that can be used in a view
+
+|| *Component* || *Example* || *Rendering* ||
+|| InputText || {{{<inputText value="HelloBean_name">}}} || ||
