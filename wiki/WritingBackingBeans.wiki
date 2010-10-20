@@ -1,0 +1,7 @@
+#summary Detailed look on features of Backing Beans in Movico
+
+= What's a Backing Bean? =
+
+A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}} or {{{SessionBean}}}. It contains properties that can map to UI components in the views you create.
+
+Suppose your view contains a simple input field. 
