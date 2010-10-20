@@ -1,6 +1,6 @@
 #summary About Movico
 
-= Introduction =
+= What is Movico? =
 
 Movico is a MVC framework for PHP inspired by JSF principles. It supports
  * Writing request-scoped and session-scoped managed beans
@@ -11,4 +11,4 @@ Movico is entirely written in OOP PHP.
 
 = Example =
 
-Check out the 2-minute [MvcExample] for an instant view on the capabilities of Movico.
+Check out the 2-minute [MvcExample] for an instant view on the capabilities and ease-of-use that makes Movico your ideal MVC development companion.
