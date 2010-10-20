@@ -59,7 +59,7 @@ UserModel is an abstract class and thus cannot be instantiated. Subclass *User* 
 class User extends UserModel {
 
     public function getFullName() {
-        return getFirstName()." ".getLastName();
+        return $this->getFirstName()." ".$this->getLastName();
     }
 
 }
