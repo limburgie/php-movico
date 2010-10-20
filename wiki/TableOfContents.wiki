@@ -1,6 +1,8 @@
-= Table of Contents =
+= Navigation =
 
  * [Home]
-  * Test
-  * Test2
+ * [Framework]
+  * [Backing Beans]
+  * [ComponentReference]
  * [ServiceBuilder]
+ * [AboutAuthor]
