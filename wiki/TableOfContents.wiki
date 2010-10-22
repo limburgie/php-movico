@@ -1,13 +1,14 @@
 = Navigation =
 
  * [Home Home]
- * [Framework The Movico Framework]
  * [GettingStarted Getting Started]
   * [MvcExample Two-minutes Example]
- * [ViewComponents View Components]
+ * [Framework The Movico Framework]
+  * [BackingBeans Writing Backing Beans]
+  * [ServiceBuilder Service Builder]
+ * [ViewComponents Components]
   * [ScriptImports Importing CSS/JS]
   * [FormElements Form Elements]
   * [DataLists Lists of Data]
   * [ComponentReference Component Reference]
- * [ServiceBuilder]
- * [AboutAuthor]
+ * [AboutAuthor About the Author]
