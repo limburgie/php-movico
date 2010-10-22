@@ -6,6 +6,7 @@
  * [Framework The Movico Framework]
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
+   * [EntityFinders Entity Finders]
  * [ViewComponents Components]
   * [ScriptImports Importing CSS/JS]
   * [FormElements Form Elements]
