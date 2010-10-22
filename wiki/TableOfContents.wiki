@@ -4,7 +4,7 @@
  * [GettingStarted Getting Started]
   * [MvcExample Two-minutes Example]
  * [Framework The Movico Framework]
-  * [BackingBeans Writing Backing Beans]
+  * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
  * [ViewComponents Components]
   * [ScriptImports Importing CSS/JS]
