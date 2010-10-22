@@ -2,6 +2,8 @@
 
  * [Home Home]
  * [Framework The Movico Framework]
+ * [GettingStarted Getting Started]
+  * [MvcExample Two-minutes Example]
  * [ViewComponents View Components]
   * [ScriptImports Importing CSS/JS]
   * [FormElements Form Elements]
