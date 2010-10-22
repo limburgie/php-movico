@@ -4,5 +4,7 @@
  * [Framework The Movico Framework]
  * [ViewComponents View Components]
   * [ScriptImports Importing CSS/JS]
+  * [FormElements Form Elements]
+  * [DataLists Lists of Data]
  * [ServiceBuilder]
  * [AboutAuthor]
