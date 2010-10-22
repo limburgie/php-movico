@@ -1,10 +1,8 @@
 = Navigation =
 
- * [Home]
- * [Framework]
-  * [Backing Beans]
-  * [ComponentReference]
- * [ViewComponents]
-  * [ScriptImports]
+ * [Home Home]
+ * [Framework The Movico Framework]
+ * [ViewComponents View Components]
+  * [ScriptImports Importing CSS/JS]
  * [ServiceBuilder]
  * [AboutAuthor]
