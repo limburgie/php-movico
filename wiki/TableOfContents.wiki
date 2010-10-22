@@ -4,5 +4,7 @@
  * [Framework]
   * [Backing Beans]
   * [ComponentReference]
+ * [ViewComponents]
+  * [ScriptImports]
  * [ServiceBuilder]
  * [AboutAuthor]
