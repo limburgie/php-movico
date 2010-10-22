@@ -2,13 +2,19 @@
 
 = What is Movico? =
 
-Movico is a MVC framework for PHP inspired by JSF principles. It supports
- * Writing request-scoped and session-scoped managed beans
- * Writing XML views with JSF-like components (inputText, dataTable, ...)
+Movico is not just another MVC framework for PHP. It is inspired by Java Server Faces principles and other enterprise frameworks such as Liferay Portal. It supports
+ * Writing request-scoped and session-scoped backing beans
+ * Writing XML views with rich JSF-like components (inputText, dataTable, ...)
  * Generating domain models, services and SQL from an entity definition file
 
-Movico is entirely written in OOP PHP.
+== OO all the way ==
 
-= Example =
+If you don't like to code object oriented this framework is not for you. Movico is 100% object oriented and the developer is obliged to write object oriented code.
+
+== Support ==
+
+Movico is written in PHP 5. It currently only supports MySQL.
+
+= What are you waiting for? =
 
 Check out the 2-minute [MvcExample] for an instant view on the capabilities and ease-of-use that makes Movico your ideal MVC development companion.
