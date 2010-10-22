@@ -2,6 +2,6 @@
 
 || *Component* || *Example* || *Rendering* ||
 || Form || {{{<form></form>}}} || ||
-|| [#InputText InputText] || {{{<inputText value="HelloBean_name">}}} || ||
+|| [#InputText InputText] || {{{<inputText value="HelloBean_name"/>}}} || ||
 
 == InputText ==
