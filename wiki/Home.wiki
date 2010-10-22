@@ -17,4 +17,5 @@ Movico is written in PHP 5. It currently only supports MySQL.
 
 = What are you waiting for? =
 
-Check out the 2-minute [MvcExample] for an instant view on the capabilities and ease-of-use that makes Movico your ideal MVC development companion.
+ * Check out the 2-minute [MvcExample example] for an instant view on the capabilities and ease-of-use that makes Movico your ideal MVC development companion.
+ * Learn how the [MovicoFramework Movico Framework] works.
