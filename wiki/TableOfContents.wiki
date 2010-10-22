@@ -8,5 +8,6 @@
   * [ScriptImports Importing CSS/JS]
   * [FormElements Form Elements]
   * [DataLists Lists of Data]
+  * [ComponentReference Component Reference]
  * [ServiceBuilder]
  * [AboutAuthor]
