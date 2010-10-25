@@ -14,10 +14,10 @@ A view in Movico is like a JSP page in JSF. In Movico, it is a strict XML file t
 <?xml version="1.0"?>
 <!DOCTYPE note SYSTEM "http://php-movico.googlecode.com/svn/trunk/php-movico/dtd/view.dtd">
 <view>
-    <outputText value="HelloBean_message"/>
+    <outputText value="#{HelloBean.message}"/>
     <form>
-        <inputText value="HelloBean_name"/>
-        <commandButton action="HelloBean_sayHello" value="Say Hello!"/>
+        <inputText value="#{HelloBean.name}"/>
+        <commandButton action="#{HelloBean.sayHello}" value="Say Hello!"/>
     </form>
 </view>
 }}}
@@ -75,6 +75,7 @@ This is all you need for a working Movico application! Notice that:
  * You didn't do anything database related yet... Check the [ServiceBuilder] page for that
 
 = Other topics =
+
  * [ComponentReference]: overview of the different components you can use in your views and how they are rendered
  * [WritingBackingBeans]: more information about beans, including scope and managed properties
  * [ServiceBuilder]: learn how to persist data to a database in no time
