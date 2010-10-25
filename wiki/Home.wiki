@@ -14,7 +14,7 @@ Under construction:
 
 == Convention over configuration ==
 
-A lot of frameworks still need heavy configuration. In Movico the use of configuration files is very limited. Rather, developers need to know just a few (obvious) conventions and he is good to go.
+A lot of frameworks still need heavy configuration. In Movico the use of configuration files is very limited. Rather, developers need to know just a few (obvious) conventions and he is good to go. Read more about "Convention over configuration" in Movico [ConventionOverConfig here].
 
 == OO all the way ==
 
