@@ -1,15 +1,15 @@
 = Navigation =
 
  * [Home Home]
- * [GettingStarted Getting Started]
+ * Getting Started
   * [MvcExample Two-minutes Example]
- * [Framework The Movico Framework]
+ * The Movico Framework
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
    * [EntityFinders Entity Finders]
- * [ViewComponents Components]
+ * Components
   * [ScriptImports Importing CSS/JS]
-  * [FormElements Form Elements]
-  * [DataLists Lists of Data]
   * [ComponentReference Component Reference]
+ * Extending Movico
+  * [AddNewComponent Create Custom Component]
  * [AboutAuthor About the Author]
