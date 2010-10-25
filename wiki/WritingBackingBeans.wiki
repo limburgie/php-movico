@@ -39,11 +39,30 @@ Our view looks like this:
 
 In this case, the {{{inputText}}} component binds to the {{{name}}} field on the {{{UserBean}}}.
 
+== Application Flow ==
+
+Let's see what happens when we access the view, enter a value into the input field and submit the form:
+
+=== 1. User navigates to index page ===
+
+The application will search for the default view (index.xml) of the application. It parses the components of the view into Movico component objects. If a component references a bean, the bean is searched (or initialized if it does not yet exist) by the BeanLocator. The value of the field that is referenced by the component is retrieved from the bean. The components then render themselves.
+
+=== 2. User enters value and submits form ===
+
+The application notices that there was a submission. It retrieves the bean the action was called upon and invokes the right action method. Before doing that however, the application sets the bean's values that were entered by the user in the form components so these values can be used inside the action method.
+
+Inside the action method the necessary business logic is done. After this, the return value of the action method is used to retrieve the next view. Then step 1 executes again: view is parsed, bean values are retrieved and components are rendered.
+
 = Backing Bean scopes =
 
 A Backing Bean can be request scoped, session scoped or application scoped.
  * A *RequestBean* survives only one request. When the user refreshes the page, all data that was stored in request beans is lost.
  * A *SessionBean* survives a whole user session. The session ends when the user closes his browser. Typically, a session scoped bean holds login information.
 
-Remarks:
- * If you don't know which scope to use, use request scope as this will be sufficient for most cases
+== Example: difference between request scope and session scope ==
+
+Suppose we navigate to the index page again after we submitted the form inside the previous example. You will notice that the bean is reinitialized and the form element is empty again.
+
+Now let {{{UserBean}}} extend {{{SessionBean}}} instead of {{{RequestBean}}}. Submit the form and navigate to the index page. The submitted field is still visible in the input field element. This is because the bean is now saved in session scope. It will only be reset when you close your browser.
+
+*Remark:* If you don't know which scope to use, use request scope as this will be sufficient for most cases.
