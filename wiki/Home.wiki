@@ -2,10 +2,10 @@
 
 = What is Movico? =
 
-Movico is not just another MVC framework for PHP! It is inspired by [http://en.wikipedia.org/wiki/JavaServer_Faces Java Server Faces] principles and other enterprise frameworks such as [http://www.liferay.com Liferay Portal]. It supports:
+Movico is not just another MVC framework for PHP! It is inspired by [http://en.wikipedia.org/wiki/JavaServer_Faces Java Server Faces] principles and other enterprise Java frameworks such as [http://www.liferay.com Liferay Portal] and the [http://www.springsource.org Spring] framework. It supports:
  * Writing request-scoped and session-scoped *backing beans*
  * Writing *XML views* with rich JSF-like components (inputRichText, dataTable, ...)
- * Auto-generation of service layer from an entity definition file using the *Service Builder*
+ * Auto-generation of service and domain layer from an entity definition file using the *Service Builder*
 
 Under construction:
  * View templating
@@ -18,7 +18,7 @@ A lot of frameworks still need heavy configuration. In Movico the use of configu
 
 == OO all the way ==
 
-If you don't like to code object oriented this framework is _not_ for you. Unlike many other PHP frameworks, Movico is *100% object oriented* and the developer is _obliged_ to write OO code.
+If you don't like to code object oriented this framework is _not_ for you. Unlike many other PHP frameworks, Movico is *100% object oriented* and the developer is ~~encouraged~~ _obliged_ to write OO code!
 
 == Support ==
 
@@ -28,3 +28,7 @@ Movico is written in *PHP 5.2*. It currently only supports *MySQL* as a database
 
  * Check out the 2-minute [MvcExample example] for an instant view on the capabilities and ease-of-use that makes Movico your ideal MVC development companion.
  * Read in-depth documentation about the [MovicoFramework Movico Framework].
+
+= Where to download this piece of art? =
+
+As you may have noticed no download is available just yet. You can already download the source from SVN but you're not encouraged to do so. A first working beta is scheduled before the end of the year.
