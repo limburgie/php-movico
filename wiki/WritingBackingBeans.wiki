@@ -2,7 +2,7 @@
 
 = What's a Backing Bean? =
 
-A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}}, {{{SessionBean}}} or {{{ApplicationBean}}}. It contains properties that can map to UI components in the views you create.
+A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}} or {{{SessionBean}}}. It contains properties that can map to UI components in the views you create.
 
 == Example ==
 
@@ -31,7 +31,9 @@ class UserBean extends RequestBean {
 Our view looks like this:
 {{{
 <view>
-    <inputText value="UserBean_name"/>
+    <form>
+        <inputText value="#{UserBean.name}"/>
+    </form>
 </view>
 }}}
 
@@ -42,12 +44,6 @@ In this case, the {{{inputText}}} component binds to the {{{name}}} field on the
 A Backing Bean can be request scoped, session scoped or application scoped.
  * A *RequestBean* survives only one request. When the user refreshes the page, all data that was stored in request beans is lost.
  * A *SessionBean* survives a whole user session. The session ends when the user closes his browser. Typically, a session scoped bean holds login information.
- * An *ApplicationBean* stores information or functionality that is shared by all users.
 
 Remarks:
  * If you don't know which scope to use, use request scope as this will be sufficient for most cases
- * Because PHP contains no notion of application-wide variables, ApplicationBeans are stored on the filesystem, which is pretty slow. Only use this scope if you really need or want to.
-
-= Differences with JSF =
-
-Instead of the Expression Language syntax JSF uses, We just apply a string value to our components.
