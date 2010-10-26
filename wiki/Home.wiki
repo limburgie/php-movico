@@ -6,10 +6,10 @@ Movico is not just another MVC framework for PHP! It is inspired by [http://en.w
  * Writing request-scoped and session-scoped *backing beans*
  * Writing *XML views* with rich JSF-like components (inputRichText, dataTable, ...)
  * Auto-generation of service and domain layer from an entity definition file using the *Service Builder*
+ * AJAX support
 
 Under construction:
  * View templating
- * AJAX support
  * ORM support
 
 == Convention over configuration ==
