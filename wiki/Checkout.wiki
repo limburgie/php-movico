@@ -12,4 +12,4 @@ Please not that this code is regularly updated and is not meant to be stable.
 
 = Download =
 
-Check the [Download] page.
+Check the [Downloads] page.
