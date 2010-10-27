@@ -16,13 +16,15 @@ Under construction:
 
 A lot of frameworks still need heavy configuration. In Movico the use of configuration files is very limited. Rather, developers need to know just a few (obvious) conventions and he is good to go. Read more about "Convention over configuration" in Movico [ConventionOverConfig here].
 
-== OO all the way ==
+== OO + XML all the way ==
 
 If you don't like to code object oriented this framework is _not_ for you. Unlike many other PHP frameworks, Movico is *100% object oriented* and the developer is ~~encouraged~~ _obliged_ to write OO code!
 
+With that being said, the developer does not need any knowledge other than PHP and XML to start writing code in Movico. No single line of Javascript is needed for AJAX support.
+
 == Support ==
 
-Movico is written in *PHP 5.2*. It currently only supports *MySQL* as a database.
+Movico is works on *PHP 5.2* and higher. It currently only supports *MySQL* as a database, but this will change in the near future when the ORM layer will be implemented.
 
 = What are you waiting for? =
 
