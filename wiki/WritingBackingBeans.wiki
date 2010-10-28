@@ -53,7 +53,7 @@ The application notices that there was a submission. It retrieves the bean the a
 
 Inside the action method the necessary business logic is done. After this, the return value of the action method is used to retrieve the next view. Then step 1 executes again: view is parsed, bean values are retrieved and components are rendered.
 
-= Backing Bean scopes =
+= Bean scopes =
 
 A Backing Bean can be request scoped, session scoped or application scoped.
  * A *RequestBean* survives only one request. When the user refreshes the page, all data that was stored in request beans is lost.
