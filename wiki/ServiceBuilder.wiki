@@ -10,20 +10,20 @@ Below you see an example of an entity class definition.
 <service-builder>
     <entity name="User" table="myphpapp_user">
         <column name="id" type="int" primary="true" auto-increment="true"/>
-        <column name="firstName type="String" size="50"/>
-        <column name="lastName type="String" size="50"/>
+        <column name="firstName" type="String" size="50"/>
+        <column name="lastName" type="String" size="50"/>
     </entity>
 </service-builder>
 }}}
 
 In this example we defined one entity named *User*. It has three fields: *id*, which is the primary key, *firstName* and *lastName*. Let's take a look at what Service Builder generates for us when we invoke it on this file:
  * *tables.sql*: SQL table creation script
- * *UserModel*: abstract POPO (plain-old PHP object) with getters and setters for all properties
- * *User*: extends UserModel with custom domain object methods
- * *UserPersistence*: low-level CRUD operations implemented as SQL queries
- * *UserServiceBase*: abstract service class with default service methods and finders
- * *UserService*: extends UserServiceBase with custom service methods
- * *UserServiceUtil*: to be called by the developer in Backing Beans
+ * *!UserModel*: abstract POPO (plain-old PHP object) with getters and setters for all properties
+ * *User*: extends !UserModel with custom domain object methods
+ * *!UserPersistence*: low-level CRUD operations implemented as SQL queries
+ * *!UserServiceBase*: abstract service class with default service methods and finders
+ * *!UserService*: extends !UserServiceBase with custom service methods
+ * *!UserServiceUtil*: to be called by the developer in Backing Beans
 
 == tables.sql ==
 
