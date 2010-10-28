@@ -64,7 +64,7 @@ class HelloBean extends RequestBean {
 
 At last the method returns "{{{view}}}", which is the view (without the {{{.xml}}}) to navigate to after this method has been executed. In this case it is the same view we came from ({{{hello.xml}}}).
 
-Note that our bean extends {{{RequestBean}}}. This means that the bean will be in request scope so it will be reinstantiated on subsequent requests. Read more about bean scopes [WritingBackingBeans#Scopes here].
+Note that our bean extends {{{RequestBean}}}. This means that the bean will be in request scope so it will be reinstantiated on subsequent requests. Read more about bean scopes [WritingBackingBeans#Bean_scopes here].
 
 = That's it! =
 
