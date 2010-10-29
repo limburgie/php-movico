@@ -3,3 +3,7 @@
 = Sorry! =
 
 Movico is not yet available for download. A first beta version will be ready before the end of the year! If you're really impatient go to the [Checkout Subversion Checkout] page.
+
+= Demo =
+
+Check [http://movico.limburgie.be http://movico.limburgie.be] for a demo.
