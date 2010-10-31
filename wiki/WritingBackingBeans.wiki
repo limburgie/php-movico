@@ -2,68 +2,85 @@
 
 = What's a Backing Bean? =
 
-A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}}, {{{SessionBean}}} or {{{ApplicationBean}}}. It contains properties that map to UI components in the views you create. It contains action methods that map to user events and that execute business logic.
+A Backing Bean in Movico is a PHP class that extends the {{{BackingBean}}} abstract class. It contains properties that can map to view components. It contains action methods that map to user events on the view (f.e. clicking a button) and that execute business logic in the case such action is performed.
 
-== Example ==
+A Backing Bean always has a scope. There are three possible scopes: request, session and application. A Backing Bean uses a scope by extending {{{RequestBean}}}, {{{SessionBean}}} or {{{ApplicationBean}}}.
 
-Suppose your view contains a simple input field. When a user enters a value and submits, we want this value to be available on the Backing Bean. Similarly, when we assign a value to the field on the Backing Bean, we want the input field to show that value to the user.
+To get an understanding of how scopes work, please take a look at the following examples:
+ * [MvcExample HelloBean], an example of a {{{RequestBean}}}
+ * [#LoginBean], an example of a {{{SessionBean}}}
+ * [#ChatBean], an example of an {{{ApplicationBean}}}
 
-For this to happen we need a field on the Backing Bean and a public getter and setter to access this field from the outside. The Movico Controller will get and set the right values for us, we only need to supply the accessor methods. Our bean now looks like this:
+= Examples =
 
-{{{
-<?
-class UserBean extends RequestBean {
+== LoginBean ==
 
-    private $name;
+A request scoped bean cannot hold information across different requests. Unlike session scoped beans, that survive as long as the user session. A user session in PHP lasts until a timeout is reached or if the user closes his browser.
 
-    public function getName() {
-        return $this->name;
-    }
+A typical use for a session scoped bean is a bean that holds user information at login. At user logon, the login credentials the user enters are validated. If this succeeds, a reference to the user object is stored inside a SessionBean. This way, each page the user visits can use information from the stored information in the SessionBean. When the user signs out, the user object is removed from the bean.
 
-    public function setName($name) {
-        $this->name = $name;
-    }
+Let's see how this works in practice. We will make three views, a login page, a logged-in page and a profile page. The login page contains input fields for a username and password. We will skip the validation and assume that the user enters the right credentials. When logged in, the user arrived to the logged-in page. From here he can navigate to his profile page where he can see his information.
 
-}
-?>
-}}}
+=== Creating the views ===
 
-Our view looks like this:
+View {{{login.xml}}} contains the input fields and a button to sign in. When signed in, the user is redirected to the {{{logged-in.xml}}} view.
 {{{
 <view>
     <form>
-        <inputText value="#{UserBean.name}"/>
+        <panelGrid columns="1">
+            <inputText value="#{LoginBean.username}"/>
+            <inputSecret value="#{LoginBean.password}"/>
+            <commandButton action="#{LoginBean.login}" value="Login"/>
+        </panelGrid>
     </form>
 </view>
 }}}
 
-In this case, the {{{inputText}}} component binds to the {{{name}}} field on the {{{UserBean}}}.
+View {{{logged-in.xml}}} only contains a button that brings the user to his profile page.
+{{{
+<view>
+    <form>
+        <commandButton action="#{LoginBean.toProfile}" value="Go to my profile"/>
+    </form>
+</view>
+}}}
 
-== Application Flow ==
+The {{{profile.xml}}} view just shows the name of the user that was logged in:
+{{{
+<view>
+    <outputText value="Welcome, #{LoginBean.username}"/>
+</view>
+}}}
 
-Let's see what happens when we access the view, enter a value into the input field and submit the form:
+=== Creating the LoginBean ===
 
-=== 1. User navigates to index page ===
+First of all, our LoginBean should extend SessionBean. Inside the bean, the username and password are defined together with their (public) getter and setter. The {{{login}}} action method just navigates to the logged-in page (the property bindings on the login view will make sure the properties are filled with the values the user entered) if username and password are the same (great security, I know). The {{{toProfile}}} action method will just take the user to the profile view.
+{{{
+class LoginBean extends SessionBean {
 
-The application will search for the default view (index.xml) of the application. It parses the components of the view into Movico component objects. If a component references a bean, the bean is searched (or initialized if it does not yet exist) by the BeanLocator. The value of the field that is referenced by the component is retrieved from the bean. The components then render themselves.
+    private $username;
+    private $password;
 
-=== 2. User enters value and submits form ===
+    // getters and setters...
 
-The application notices that there was a submission. It retrieves the bean the action was called upon and invokes the right action method. Before doing that however, the application sets the bean's values that were entered by the user in the form components so these values can be used inside the action method.
+    public function login() {
+        if($username == $password) {
+            return "logged-in";
+        }
+        $this->username = "";
+        $this->password = "";
+        return null;
+    }
 
-Inside the action method the necessary business logic is done. After this, the return value of the action method is used to retrieve the next view. Then step 1 executes again: view is parsed, bean values are retrieved and components are rendered.
+    public function toProfile() {
+        return "profile";
+    }
 
-= Bean scopes =
+}
+}}}
 
-A Backing Bean can be request scoped, session scoped or application scoped.
- * A *RequestBean* survives only one request. When the user refreshes the page, all data that was stored in request beans is lost.
- * A *SessionBean* survives a whole user session. The session ends when the user closes his browser. Typically, a session scoped bean holds login information.
- * A *ApplicationBean* is a bean containing information that is shared across all users that access the application.
+=== Testing the flow ===
 
-== Example: difference between request scope and session scope ==
+When the user enters his credentials and the login succeeds, the user will go to the logged-in page. When the user now navigates on to the profile page, the session bean will still have "remembered" the user's name because the bean is in session scope.
 
-Suppose we navigate to the index page again after we submitted the form inside the previous example. You will notice that the bean is reinitialized and the form element is empty again.
-
-Now let {{{UserBean}}} extend {{{SessionBean}}} instead of {{{RequestBean}}}. Submit the form and navigate to the index page. The submitted field is still visible in the input field element. This is because the bean is now saved in session scope. It will only be reset when you close your browser.
-
-*Remark:* If you don't know which scope to use, use request scope as this will be sufficient for most cases.
+You can change the bean to a request scoped bean by extending from RequestBean instead of SessionBean. In this case, once the user has accessed the profile page, his information will be lost.
