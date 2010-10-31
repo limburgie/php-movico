@@ -2,7 +2,7 @@
 
 = What's a Backing Bean? =
 
-A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}} or {{{SessionBean}}}. It contains properties that can map to UI components in the views you create.
+A Backing Bean in Movico is a PHP class that extends {{{RequestBean}}}, {{{SessionBean}}} or {{{ApplicationBean}}}. It contains properties that map to UI components in the views you create. It contains action methods that map to user events and that execute business logic.
 
 == Example ==
 
@@ -58,6 +58,7 @@ Inside the action method the necessary business logic is done. After this, the r
 A Backing Bean can be request scoped, session scoped or application scoped.
  * A *RequestBean* survives only one request. When the user refreshes the page, all data that was stored in request beans is lost.
  * A *SessionBean* survives a whole user session. The session ends when the user closes his browser. Typically, a session scoped bean holds login information.
+ * A *ApplicationBean* is a bean containing information that is shared across all users that access the application.
 
 == Example: difference between request scope and session scope ==
 
