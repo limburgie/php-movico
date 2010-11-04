@@ -1,0 +1,9 @@
+#summary Installing Movico
+
+= Requirements =
+
+= Download =
+
+You can download the latest Movico release here.
+
+= Installation =
