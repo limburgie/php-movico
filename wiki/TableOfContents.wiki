@@ -3,6 +3,7 @@
  * [Home Home]
  * Getting Started
   * [MvcExample Two-minutes Example]
+ * [Installation]
  * The Movico Framework
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
