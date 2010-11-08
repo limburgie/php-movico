@@ -8,6 +8,7 @@
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
    * [EntityFinders Entity Finders]
+   * [Relationships]
   * [AjaxSupport Ajax Support]
  * Components
   * [ScriptImports Importing CSS/JS]
