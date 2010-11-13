@@ -52,7 +52,7 @@ The {{{profile.xml}}} view just shows the name of the user that was logged in:
 </view>
 }}}
 
-=== Creating the LoginBean ===
+=== Creating the !LoginBean ===
 
 First of all, our LoginBean should extend SessionBean. Inside the bean, the username and password are defined together with their (public) getter and setter. The {{{login}}} action method just navigates to the logged-in page (the property bindings on the login view will make sure the properties are filled with the values the user entered) if username and password are the same (great security, I know). The {{{toProfile}}} action method will just take the user to the profile view.
 {{{
@@ -85,7 +85,7 @@ When the user enters his credentials and the login succeeds, the user will go to
 
 You can change the bean to a request scoped bean by extending from RequestBean instead of SessionBean. In this case, once the user has accessed the profile page, his information will be lost.
 
-== CounterBean ==
+== !CounterBean ==
 
 Suppose you want to store data _across_ user sessions. Put in another way, you want to share a bean between all the users in your application. A session scoped bean will not suffice because it addresses each user separately.
 
@@ -111,9 +111,9 @@ As an example we will create a bean that holds the value for a counter. Each tim
 </view>
 }}}
 
-=== Implementing the CounterBean ===
+=== Implementing the !CounterBean ===
 
-The CounterBean is equally simple. We just specify a {{{count}}} field with its getter and the {{{increment}}} action method that... well, increments it. The only speciality is that your bean should of course extend *ApplicationBean*.
+The !CounterBean is equally simple. We just specify a {{{count}}} field with its getter and the {{{increment}}} action method that... well, increments it. The only speciality is that your bean should of course extend *ApplicationBean*.
 {{{
 <?
 class CounterBean extends ApplicationBean {
