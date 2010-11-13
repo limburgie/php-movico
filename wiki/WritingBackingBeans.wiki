@@ -115,7 +115,6 @@ As an example we will create a bean that holds the value for a counter. Each tim
 
 The !CounterBean is equally simple. We just specify a {{{count}}} field with its getter and the {{{increment}}} action method that... well, increments it. The only speciality is that your bean should of course extend *ApplicationBean*.
 {{{
-<?
 class CounterBean extends ApplicationBean {
 	
     private $count = 0;
@@ -130,7 +129,6 @@ class CounterBean extends ApplicationBean {
     }
 	
 }
-?>
 }}}
 
 That's it! With only so few code you can share information across user sessions. Isn't that great?
