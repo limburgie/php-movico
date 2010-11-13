@@ -13,7 +13,7 @@ To get an understanding of how scopes work, please take a look at the following 
 
 = Examples =
 
-== LoginBean ==
+== !LoginBean ==
 
 A request scoped bean cannot hold information across different requests. Unlike session scoped beans, that survive as long as the user session. A user session in PHP lasts until a timeout is reached or if the user closes his browser.
 
