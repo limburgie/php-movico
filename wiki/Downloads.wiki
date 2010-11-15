@@ -7,3 +7,5 @@ Movico is not yet available for download. A first beta version will be ready bef
 = Demo =
 
 Check [http://movico.limburgie.be http://movico.limburgie.be] for a demo.
+
+http://php-movico.googlecode.com/files/movico.png
