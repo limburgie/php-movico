@@ -8,13 +8,18 @@ Enabling AJAX in Movico is extremely easy. Just set the following property in {{
 
 {{{
 ajax_enabled=true
+ajax_timeout=5000
 }}}
 
-With this setting enabled, all form submits will be done asynchronously, enabling smooth and desktop-like view transitions.
+With the {{{ajax_enabled}}} parameter set to true, all form submits will be done asynchronously, enabling smooth and desktop-like view transitions. The default is {{{false}}}.
+
+You can also specify how many milliseconds each AJAX request waits for its response using the {{{ajax_timeout}}} parameter. After the specified timeout, Movico will cease waiting and the user is allowed to do the same or another request.
 
 == The {{{ajaxLoading}}} element ==
 
-Because AJAX is asynchronous, it can sometimes take a while before a response returns to the client. To give an indication to the user that the browser is waiting for a response, you can use the {{{ajaxLoading}}} element. This element will show a loading animation during each AJAX request. It has one parameter, {{{src}}}, that contains a _relative_ link to an image in the {{{view/img}}} folder.
+Because AJAX is asynchronous, it can sometimes take a while (depending on the server specs and the amount of work that needs to be done) before a response returns to the client. To give an indication to the user that the browser is waiting for a response, you can use the {{{ajaxLoading}}} element. This element will show a loading animation during each AJAX request. It has one parameter, {{{src}}}, that contains a _relative_ link to an image in the {{{view/img}}} folder.
+
+If {{{src}}} is not specified, a default image is used.
 
 {{{
 <view>
