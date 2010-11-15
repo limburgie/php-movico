@@ -13,6 +13,4 @@
  * Components
   * [ScriptImports Importing CSS/JS]
   * [ComponentReference Component Reference]
- * Extending Movico
-  * [AddNewComponent Create Custom Component]
  * [AboutAuthor About the Author]
