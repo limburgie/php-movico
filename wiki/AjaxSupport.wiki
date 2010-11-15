@@ -4,16 +4,16 @@
 
 == Configuration ==
 
-Enabling AJAX in Movico is extremely easy. Just set the following property in {{{main.conf}}}:
+Enabling AJAX in Movico is extremely easy. Just set the following properties in {{{main.conf}}}:
 
 {{{
 ajax_enabled=true
-ajax_timeout=5000
+ajax_timeout=7500
 }}}
 
 With the {{{ajax_enabled}}} parameter set to true, all form submits will be done asynchronously, enabling smooth and desktop-like view transitions. The default is {{{false}}}.
 
-You can also specify how many milliseconds each AJAX request waits for its response using the {{{ajax_timeout}}} parameter. After the specified timeout, Movico will cease waiting and the user is allowed to do the same or another request.
+You can also specify how many milliseconds each AJAX request waits for its response using the {{{ajax_timeout}}} parameter. The default is {{{5000}}} (5 seconds). After the specified timeout, Movico will cease waiting and the user is allowed to do the same or another request.
 
 == The {{{ajaxLoading}}} element ==
 
