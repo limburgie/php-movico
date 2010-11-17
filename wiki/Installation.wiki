@@ -2,8 +2,17 @@
 
 = Requirements =
 
+ * PHP 5.3 or higher
+ * MySQL database
+
 = Download =
 
-You can download the latest Movico release here.
+You can download the latest Movico release [Downloads here].
 
 = Installation =
+
+Just unpack the zip file on your local system to start working with it. When you're ready developing, upload the contents to the web server.
+
+= Configuration =
+
+Check [BasicConfiguration this page] for instructions about the basic configuration of your package.
