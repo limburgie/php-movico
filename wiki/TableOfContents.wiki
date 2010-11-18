@@ -7,6 +7,7 @@
  * The Movico Framework
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
+   * [DefinitionFile Entity Definition File]
    * [EntityFinders Entity Finders]
    * [Relationships]
   * [AjaxSupport Ajax Support]
