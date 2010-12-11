@@ -7,7 +7,7 @@
 Download the first beta version of Movico here. Beware that this is an unfinished product. The first release candidate will be launched once all major issues are resolved.
 
 || *Release date* || *Version* || *Download Link* || *Size* ||
-|| Dec. 11, 2010 || 1.0 beta || [http://code.google.com/p/php-movico/downloads/detail?name=movico-1.0-beta.zip&can=2&q= movico-1.0-beta.zip] || 86 kB ||
+|| Dec. 11, 2010 || 1.0 beta || [http://php-movico.googlecode.com/files/movico-1.0-beta.zip movico-1.0-beta.zip] || 86 kB ||
 
 Check [Installation this] page for more information about how to install Movico onto your server host.
 
