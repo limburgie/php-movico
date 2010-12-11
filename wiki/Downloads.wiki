@@ -4,7 +4,7 @@
 
 == Download first beta ==
 
-Download the first beta version of Movico here. Beware that this is an unfinished product. The first release candidate will be launched once all major issues are resolved.
+Download the first _beta_ version of Movico here. *Beware that this is an unfinished product!* The first release candidate will be launched once all major issues are resolved. Target date for this is the first quarter of 2011.
 
 || *Release date* || *Version* || *Download Link* || *Size* ||
 || Dec. 11, 2010 || 1.0 beta || [http://php-movico.googlecode.com/files/movico-1.0-beta.zip movico-1.0-beta.zip] || 86 kB ||
