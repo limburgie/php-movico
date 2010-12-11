@@ -2,8 +2,14 @@
 
 = Requirements =
 
- * PHP 5.3 or higher
- * MySQL database
+== For development ==
+ * A local Apache/MySQL/PHP stack including:
+  * *PHP 5.3* or higher
+  * *MySQL 5.0* or higher
+ * Recommended: [http://www.eclipse.org/downloads/packages/eclipse-php-developers/heliossr1 Eclipse for PHP Developers] or your IDE of choice
+
+== For deployment ==
+ * [http://en.wikipedia.org/wiki/File_Transfer_Protocol FTP] access or any other functionality to upload files to your webserver.
 
 = Download =
 
@@ -11,7 +17,17 @@ You can download the latest Movico release [Downloads here].
 
 = Installation =
 
-Just unpack the zip file on your local system to start working with it. When you're ready developing, upload the contents to the web server.
+== Unpack & move ==
+
+Unzip the downloaded file to the root of your local server.
+E.g. on Unix machines:
+{{{
+unzip ~/Downloads/movico -d /var/www/movico
+}}}
+
+== Test your installation ==
+
+Make sure your Apache server is started. Then navigate to http://localhost/movico. You should see a *Hello world!* message in your browser.
 
 = Configuration =
 
