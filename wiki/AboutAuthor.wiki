@@ -1,3 +1,3 @@
 #summary About the author
 
-*Peter Mesotten* is a J2EE developer that is playing with PHP for some time now. While he likes J2EE for its robustness, he also admires PHP for its ease od development and deployment and its worldwide popularity.
+*Peter Mesotten* is a J2EE developer that is playing with PHP for some time now. While he likes J2EE for its robustness, he also admires PHP for its ease of development and deployment and its popularity worldwide.
