@@ -31,6 +31,8 @@ If {{{src}}} is not specified, a default image is used.
 </view>
 }}}
 
+If ajax is not enabled in the settings, the element will not render.
+
 = How does it work? =
 
 == Technical aspects ==
