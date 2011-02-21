@@ -33,6 +33,12 @@ If {{{src}}} is not specified, a default image is used.
 
 If ajax is not enabled in the settings, the element will not render.
 
+
+= Limitations =
+
+  * Currently the File Upload is not working asynchronously. If you want to use this component, please use synchronous mode.
+  * Currently the {{{ajax_enabled}}} property is used in all views. So for the moment, you cannot use synchronous mode for some pages and asynchronous mode for others. This will be changed in the future by allowing to override the default setting by adding an attribute to the {{{view}}} component
+
 = How does it work? =
 
 == Technical aspects ==
@@ -43,8 +49,8 @@ The nice thing about AJAX integration in Movico is that it only required an addi
 
 == Under the hood ==
 
-When parsing the view, Movico checks if the AJAX parameter is enabled. If so, it adds a jQuery script to the view which will listen to the form submit event. In case of a form submission, it sends the synchronized form data to the server.
+When parsing the view, Movico checks if the AJAX parameter is enabled. If so, it adds a jQuery script to the view which will listen to the form submit event. In case of a form submission, it sends the serialized form data to the server.
 
-If the server sees that AJAX is enabled, it will take the result of the controller (which is HTML) and send it synchronized back to the client.
+If the server sees that AJAX is enabled, it will take the result of the controller (which is HTML) and send it back to the client, serialized.
 
-The client will finally receive the data and put it inside its current view. The result is that the whole page seems to be refreshed. However, the end-user will always stay on the same page.
+The client will finally receive the data and replace its current view. The result is that the whole page seems to be refreshed. However, the end-user will always stay on the same page. This way the page transitions resemble screen transitions in traditional desktop applications.
