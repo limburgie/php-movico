@@ -11,4 +11,6 @@
  * Components
   * [ScriptImports Importing CSS/JS]
   * [ComponentReference Component Reference]
+ * Games
+  * [Boggle Boggle]
  * [AboutAuthor About the Author]
