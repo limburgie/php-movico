@@ -1,0 +1,37 @@
+#summary No more requires or includes
+
+=Traditional PHP applications=
+
+In a traditional PHP application, if you want to use information from another PHP source file, you need to add {{{include}}} or {{{require}}} directives. If your application has hundreds of PHP files, the following problems arise:
+ * Managing all inter-file relations becomes cumbersome and tiring.
+ * Having dozens of includes or requires in each file clutters your code.
+ * If you refactor, all dependencies must be checked again.
+
+{{{
+<?
+$var = 5;
+?>
+}}}
+
+{{{
+<?
+include("varfile.php");
+echo $var;
+?>
+}}}
+
+=Movico=
+
+In Movico, this problem was solved by making sure that all your source files are inside the include path. A fast script loops over all your project files and adds them to the include patch one by one. At the end, each file is accessible automatically from whatever file. This means that you no longer need to worry about {{{include}}} and {{{require}}} directives and do some actual interesting coding instead.
+
+{{{
+<?
+$var = 5;
+?>
+}}}
+
+{{{
+<?
+echo $var
+?>
+}}}
