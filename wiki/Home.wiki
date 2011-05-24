@@ -3,14 +3,12 @@
 = What is Movico? =
 
 Movico is not just another MVC framework for PHP. It is inspired by [http://en.wikipedia.org/wiki/JavaServer_Faces Java Server Faces] principles and other enterprise Java frameworks such as [http://www.liferay.com Liferay Portal] and the [http://www.springsource.org Spring] framework. It supports:
+ * Automatic classloading
  * Writing request-scoped, session-scoped and application-scoped *backing beans*
  * Writing *XML views* with rich JSF-like components (inputRichText, dataTable, ...)
  * Defining *templates* (based on JSF facelets) to reuse chunks of views that are to be included in multiple views
  * Auto-generation of service and domain layer from an entity definition file using the *Service Builder*
  * Built-in AJAX support
-
-Upcoming functionality:
- * ORM integration for database independency
 
 == Convention over configuration ==
 
