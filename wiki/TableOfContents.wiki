@@ -5,6 +5,7 @@
   * [MvcExample Two-minutes Example]
  * [Installation]
  * The Movico Framework
+  * [AutoClassLoading Automatic Classloading]
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
   * [AjaxSupport Ajax Support]
