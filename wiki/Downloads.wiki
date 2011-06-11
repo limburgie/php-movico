@@ -2,14 +2,14 @@
 
 = Downloads =
 
-== Download first beta ==
+== Download nightly ==
 
-Download the first _beta_ version of Movico here. *Beware that this is an unfinished product!* The first release candidate will be launched once all major issues are resolved. Target date for this is the first quarter of 2011.
+Download the nightly build of Movico here. *Beware that this is an unfinished product!* The nightly build is also deployed on the demo site. So if you see additional features on the demo site, you can download a new nightly build to use them.
 
-|| *Release date* || *Version* || *Download Link* || *Size* ||
-|| Dec. 11, 2010 || 1.0 beta || [http://php-movico.googlecode.com/files/movico-1.0-beta.zip movico-1.0-beta.zip] || 86 kB ||
+|| *Nightly build* ||
+|| [http://46.21.168.93/php-movico/release/movico-nightly.zip movico-nightly.zip] ||
 
-Check [Installation this] page for more information about how to install Movico onto your server host.
+Check the [Installation] page for more information about how to install Movico on your server of choice.
 
 == Download source ==
 
@@ -17,6 +17,6 @@ If you want to work with the current development state of the code go to the [Ch
 
 = Demo =
 
-The [http://46.21.168.93/php-movico Demo site] is updated each night to contain the latest trunk code. If you want to dive into Movico, this is your playground!
+The [http://46.21.168.93/php-movico Demo site] is updated each night to contain the latest trunk code. If you want to get to know Movico better, this is your playground!
 
 http://php-movico.googlecode.com/files/movico.png
