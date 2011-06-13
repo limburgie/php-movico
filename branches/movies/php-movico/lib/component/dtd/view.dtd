@@ -1,0 +1,160 @@
+<!ELEMENT composition (define*)>
+<!ATTLIST composition template CDATA #REQUIRED>
+
+<!ELEMENT define ANY>
+<!ATTLIST define name CDATA #REQUIRED>
+
+<!ELEMENT template ANY>
+
+<!ELEMENT insert EMPTY>
+<!ATTLIST insert name CDATA #REQUIRED> 
+
+<!ELEMENT view ANY>
+<!ATTLIST view title CDATA #IMPLIED>
+
+<!ELEMENT form ANY>
+<!ATTLIST form
+	id CDATA #IMPLIED
+	rendered CDATA #IMPLIED
+>
+
+<!ELEMENT css EMPTY>
+<!ATTLIST css src CDATA #REQUIRED>
+
+<!ELEMENT js EMPTY>
+<!ATTLIST js src CDATA #REQUIRED>
+
+<!ELEMENT commandButton EMPTY>
+<!ATTLIST commandButton
+	value CDATA #REQUIRED
+	action CDATA #REQUIRED
+	rendered CDATA #IMPLIED
+	popup CDATA #IMPLIED
+	link CDATA #IMPLIED
+>
+
+<!ELEMENT commandLink EMPTY>
+<!ATTLIST commandLink
+	value CDATA #REQUIRED
+	action CDATA #REQUIRED
+	rendered CDATA #IMPLIED
+	popup CDATA #IMPLIED
+	link CDATA #IMPLIED
+>
+
+<!ELEMENT booleanCheckbox EMPTY>
+<!ATTLIST booleanCheckbox
+	value CDATA #REQUIRED
+	label CDATA #IMPLIED
+>
+
+<!ELEMENT inputSecret EMPTY>
+<!ATTLIST inputSecret 
+	value CDATA #REQUIRED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT inputHidden EMPTY>
+<!ATTLIST inputHidden 
+	value CDATA #REQUIRED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT inputText EMPTY>
+<!ATTLIST inputText
+	value CDATA #REQUIRED
+	id CDATA #IMPLIED
+	autoFocus CDATA #IMPLIED
+>
+
+<!ELEMENT inputTextArea EMPTY>
+<!ATTLIST inputTextArea
+	value CDATA #REQUIRED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT inputRichText EMPTY>
+<!ATTLIST inputRichText
+	value CDATA #REQUIRED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT outputLabel EMPTY>
+<!ATTLIST outputLabel
+	value CDATA #REQUIRED
+	for CDATA #REQUIRED
+>
+
+<!ELEMENT outputText EMPTY>
+<!ATTLIST outputText value CDATA #REQUIRED>
+
+<!ELEMENT selectOneMenu EMPTY>
+<!ATTLIST selectOneMenu
+	options CDATA #REQUIRED
+	value CDATA #REQUIRED
+	action CDATA #IMPLIED
+>
+
+<!ELEMENT selectManyListBox EMPTY>
+<!ATTLIST selectManyListBox
+	options CDATA #REQUIRED
+	value CDATA #REQUIRED
+	rendered CDATA #IMPLIED
+>
+
+<!ELEMENT panelGrid ANY>
+<!ATTLIST panelGrid 
+	columns CDATA #REQUIRED
+	id CDATA #IMPLIED
+	columnClasses CDATA #IMPLIED
+>
+
+<!ELEMENT panelGroup ANY>
+<!ATTLIST panelGroup
+	id CDATA #IMPLIED
+	rendered CDATA #IMPLIED
+>
+
+<!ELEMENT panelSeries ANY>
+<!ATTLIST panelSeries
+	value CDATA #REQUIRED
+	var CDATA #REQUIRED
+	rendered CDATA #IMPLIED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT panelGridSeries ANY>
+<!ATTLIST panelGridSeries
+	value CDATA #REQUIRED
+	var CDATA #REQUIRED
+	columns CDATA #REQUIRED
+	rendered CDATA #IMPLIED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT dataTable (column*)>
+<!ATTLIST dataTable
+	value CDATA #REQUIRED
+	var CDATA #REQUIRED
+	rows CDATA #IMPLIED
+	pagination CDATA #IMPLIED
+	rendered CDATA #IMPLIED
+	id CDATA #IMPLIED
+>
+
+<!ELEMENT fileUpload ANY>
+<!ATTLIST fileUpload
+	value CDATA #REQUIRED
+>
+
+<!ELEMENT column ANY>
+
+<!ELEMENT colHeader ANY>
+
+<!ELEMENT message EMPTY>
+
+<!ELEMENT ajaxLoading EMPTY>
+
+<!ELEMENT ol (li)+>
+<!ELEMENT ul (li)+>
+<!ELEMENT li ANY>
