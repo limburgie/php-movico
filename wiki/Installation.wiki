@@ -4,7 +4,7 @@
 
 == For development ==
  * A local Apache/MySQL/PHP stack including:
-  * *PHP 5.3* or higher
+  * *PHP 5.3.2* or higher
   * *MySQL 5.0* or higher
  * Recommended: [http://www.eclipse.org/downloads/packages/eclipse-php-developers/heliossr1 Eclipse for PHP Developers] or your IDE of choice
 
