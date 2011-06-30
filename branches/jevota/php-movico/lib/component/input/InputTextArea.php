@@ -1,0 +1,21 @@
+<?
+class InputTextArea extends Component {
+	
+	private $value;
+
+	public function setValue($value) {
+		$this->value = $value;
+	}
+	
+	public function doRender($index=null) {
+		$name = $this->value;
+		$val = BeanUtil::getProperty($name);
+		return "<textarea id=\"".$this->id."\" name=\"$name\">$val</textarea>";
+	}
+	
+	public function getValidParents() {
+		return array("View", "Form", "PanelGrid", "Column", "PanelGroup");
+	}
+	
+}
+?>

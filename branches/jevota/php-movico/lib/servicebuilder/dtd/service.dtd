@@ -1,0 +1,40 @@
+<!ELEMENT service-builder (entity+, order?, finder*)>
+
+<!ELEMENT entity (column*,finder*,order?)>
+<!ATTLIST entity
+	name CDATA #REQUIRED
+	table CDATA #IMPLIED
+>
+
+<!ELEMENT column EMPTY>
+<!ATTLIST column
+	name CDATA #REQUIRED
+	type (String|int|float|boolean|Date|Collection) #REQUIRED
+	primary CDATA #IMPLIED
+	auto-increment CDATA #IMPLIED
+	size CDATA #IMPLIED
+	entity CDATA #IMPLIED
+	mapping-key CDATA #IMPLIED
+	mapping-table CDATA #IMPLIED
+>
+
+<!ELEMENT order (order-column+)>
+
+<!ELEMENT order-column EMPTY>
+<!ATTLIST order-column
+	name CDATA #REQUIRED
+	order-by CDATA #REQUIRED
+>
+
+<!ELEMENT finder (finder-column+)>
+<!ATTLIST finder
+	name CDATA #REQUIRED
+	unique CDATA #IMPLIED
+>
+
+<!ELEMENT finder-column EMPTY>
+<!ATTLIST finder-column
+	name CDATA #REQUIRED
+	comparator CDATA #IMPLIED
+>
+
