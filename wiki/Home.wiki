@@ -6,9 +6,9 @@ Movico is not just another MVC framework for PHP. It is inspired by [http://en.w
  * Automatic classloading
  * Writing request-scoped, session-scoped and application-scoped *backing beans*
  * Writing *XML views* with rich JSF-like components (inputRichText, dataTable, ...)
- * Defining *templates* (based on JSF facelets) to reuse chunks of views that are to be included in multiple views
+ * *Template* definitions based on JSF facelets, to reuse chunks of views that are to be included in multiple views
  * Auto-generation of service and domain layer from an entity definition file using the *Service Builder*
- * Built-in AJAX support, including AJAX file uploads
+ * Full support for AJAX, including AJAX file uploads, bookmarkable URLs and working Back button.
 
 == Convention over configuration ==
 
@@ -31,4 +31,4 @@ Movico supports *PHP 5.2* and higher. It currently only supports *MySQL* as a da
 
 = Where to download this piece of art? =
 
-As you may have noticed no download is available just yet. You can already download the source from SVN but you're not encouraged to do so. A first working beta is scheduled before the end of the year.
+Download the nightly build [Download here].
