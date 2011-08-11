@@ -31,4 +31,4 @@ Movico supports *PHP 5.2* and higher. It currently only supports *MySQL* as a da
 
 = Where to download this piece of art? =
 
-Download the nightly build [Download here].
+Download the nightly build [Downloads here].
