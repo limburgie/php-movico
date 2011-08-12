@@ -4,6 +4,8 @@
  * Getting Started
   * [MvcExample Two-minutes Example]
  * [Installation]
+  * [ClientSideRequirements Client-side Requirements]
+  * [ServerSideRequirements Server-side Requirements]
  * The Movico Framework
   * [AutoClassLoading Automatic Classloading]
   * [WritingBackingBeans Writing Backing Beans]
