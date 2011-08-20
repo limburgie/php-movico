@@ -5,33 +5,37 @@
 In a traditional PHP application, if you want to use information from another PHP source file, you need to add {{{include}}} or {{{require}}} directives. If your application has hundreds of PHP files, the following problems arise:
  * Managing all inter-file relations becomes cumbersome and tiring.
  * Having dozens of includes or requires in each file clutters your code.
- * If you refactor, all dependencies must be checked again.
+ * If you refactor (e.g. change a class name, move a class to another directory, ...), all dependencies must be verified again.
 
 {{{
-<?
-$var = 5;
+<?php
+class Message {
+    public function sayHello() {
+        echo "Hello"
+    }
+}
 ?>
 }}}
 
 {{{
-<?
-include("varfile.php");
-echo $var;
+<?php
+include("Message.php");
+$m = new Message();
+$m->sayHello();
 ?>
 }}}
 
 =Movico=
 
-In Movico, this problem was solved by making sure that all your source files are inside the include path. A fast script loops over all your project files and adds them to the include patch one by one. At the end, each file is accessible automatically from whatever file. This means that you no longer need to worry about {{{include}}} and {{{require}}} directives and do some actual interesting coding instead.
+In Movico, this problem was solved by making sure that all your source files are inside the include path upfront. This means that each file inside your Movico installation is accessible automatically from whatever other file. You no longer need to worry about {{{include}}} and {{{require}}} directives and do some actual interesting coding instead.
 
 {{{
-<?
-$var = 5;
+<?php
+$m = new Message();
+$m->sayHello();
 ?>
 }}}
 
-{{{
-<?
-echo $var
-?>
-}}}
+=How is it done?=
+
+Check {{{path.php}}} in the root of your Movico installation. This file will initialize the include path on each request, so you're sure to have access to all new files while developing.
