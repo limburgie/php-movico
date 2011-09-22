@@ -11,9 +11,15 @@ gmaps_api_key=ABQIAAAAx_lFmPrs_Gkl6KMgU-Z9aRT2yXp_ZAY8_ufC3CFXhHIE1NvwkxTSiMpaub
 = Using the component =
 At this point, Movico provides one component for displaying a Google Map with a certain width and height, centered at a certain address. This component uses the Google Maps Javascript API V2 to display the map. Basically, this is how to use the component in your views:
 {{{
-<googleMap address="Bessemerstraat 165, 3620 Lanaken, Belgium" width="400" height="300" zoomLevel="15"/>
+<googleMap address="Biesweg, Gellik, Belgium" width="400" height="300" zoomLevel="15"/>
 }}}
+This will display a map like so:
+
+http://php-movico.googlecode.com/files/Screen%20shot%202011-09-22%20at%2008.39.58.png
+
 You can use the following attributes in your Google map:
 || *attribute* || *required* || *default value* || *description* ||
 || address || yes || || Full address that will be centered on the map ||
 || width || no || 300 || Width of the map ||
+|| height || no || 200 || Height of the map ||
+|| zoomLevel || no || 13 || Initial zoom level of the map ||
