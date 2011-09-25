@@ -13,7 +13,6 @@
   * [AjaxSupport Ajax Support]
  * Components
   * [ScriptImports Importing CSS/JS]
-  * [ComponentReference Component Reference]
    * [OutputText outputText]
   * [GoogleMaps Google Maps Support]
   * [SelectOneMenu selectOneMenu]
