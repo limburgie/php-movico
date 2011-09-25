@@ -11,11 +11,11 @@
   * [WritingBackingBeans Writing Backing Beans]
   * [ServiceBuilder Service Builder]
   * [AjaxSupport Ajax Support]
-  * [GoogleMaps Google Maps Support]
  * Components
   * [ScriptImports Importing CSS/JS]
   * [ComponentReference Component Reference]
    * [OutputText outputText]
+  * [GoogleMaps Google Maps Support]
   * [SelectOneMenu selectOneMenu]
  * Games
   * [Boggle Boggle]
