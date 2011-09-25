@@ -18,6 +18,7 @@
    * [JS js]
   * Input components
    * [BooleanCheckbox booleanCheckbox]
+   * [InputDate inputDate]
    * [SelectOneMenu selectOneMenu]
   * Output components
    * [GoogleMaps googleMap]
