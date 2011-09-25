@@ -1,8 +1,0 @@
-#summary Overview of components that can be used in a view
-
-|| *Component* || *Description* || *Rendering* ||
-|| Form || {{{<form></form>}}} || ||
-|| [#InputText InputText] || Renders an input field || ||
-|| [#OutputText OutputText] || Renders a {{{span}}} element || ||
-
-== InputText ==
