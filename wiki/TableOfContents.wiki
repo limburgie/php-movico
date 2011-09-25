@@ -14,7 +14,7 @@
  * Components
   * [ScriptImports Importing CSS/JS]
    * [OutputText outputText]
-  * [GoogleMaps Google Maps Support]
+  * [GoogleMaps googleMap]
   * [SelectOneMenu selectOneMenu]
  * Games
   * [Boggle Boggle]
