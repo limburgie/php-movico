@@ -2,7 +2,7 @@
 
 = Attributes =
 
-|| *Name* || *Required* || *Default value* || *Description* ||
+|| *Name* || *Required* || *Default* || *Description* ||
 || address || yes || || Full address that will be centered on the map ||
 || width || no || 300 || Width of the map ||
 || height || no || 200 || Height of the map ||
