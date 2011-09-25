@@ -17,6 +17,7 @@
    * [IMG img]
    * [JS js]
   * Input components
+   * [BooleanCheckbox booleanCheckbox]
    * [SelectOneMenu selectOneMenu]
   * Output components
    * [GoogleMaps googleMap]
