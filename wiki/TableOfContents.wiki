@@ -12,10 +12,14 @@
   * [ServiceBuilder Service Builder]
   * [AjaxSupport Ajax Support]
  * Components
-  * [ScriptImports Importing CSS/JS]
-   * [OutputText outputText]
-  * [GoogleMaps googleMap]
-  * [SelectOneMenu selectOneMenu]
+  * External files
+   * [CSS css]
+   * [IMG img]
+   * [JS js]
+  * Input components
+   * [SelectOneMenu selectOneMenu]
+  * Output components
+   * [GoogleMaps googleMap]
  * Games
   * [Boggle Boggle]
  * [AboutAuthor About the Author]
