@@ -9,6 +9,7 @@
  * The Movico Framework
   * [AutoClassLoading Automatic Classloading]
   * [WritingBackingBeans Writing Backing Beans]
+  * [ViewTemplating View Templating]
   * [ServiceBuilder Service Builder]
   * [AjaxSupport Ajax Support]
  * Components
