@@ -53,7 +53,7 @@ Now that our template is created, we can create multiple views based on that tem
  * Specify on which template they are based
  * Provide values for all insertion points for that template
 
-Compositions must be stored inside the {{{www/view}}} directory of your Movico installation. In the following example, we rewrite the view, created in step 1, to be a composition based on the template we just defined. For this, the {{{<define>}}} tag is used whoose name determines which insertion point we're providing a value for.
+Compositions must be stored inside the {{{www/view}}} directory of your Movico installation. In the following example, we rewrite the view, created in [#Step_1:_Normal_views step 1], to be a composition based on the template we just defined. For this, the {{{<define>}}} tag is used whoose name determines which insertion point we're providing a value for.
 
 {{{
 <composition template="main">
@@ -63,7 +63,7 @@ Compositions must be stored inside the {{{www/view}}} directory of your Movico i
 </composition>
 }}}
 
-The templating engine will make sure that this composition is converted to the view of step 1. At this point, it is of course very easy to create several other compositions out of the same template, e.g.:
+The templating engine will make sure that this composition is converted to the view of [#Step_1:_Normal_views step 1]. At this point, it is of course very easy to create several other compositions out of the same template, e.g.:
 
 {{{
 <composition template="main">
