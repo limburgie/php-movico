@@ -109,3 +109,7 @@ Notice here that, despite being a composition, {{{main.xml}}} is still stored in
 }}}
 
 This is the only view that can be referenced directly. This view will be transformed into the view in [#Step_1:_Normal_views step 1] in 2 templating steps. Evidently, more steps are possible. The sky is the limit, really.
+
+= Technical solution =
+
+Movico's templating engine is implemented inside the *!ViewRenderer* class. See {{{lib/controller/ViewRenderer.php}}}.
