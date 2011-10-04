@@ -9,6 +9,7 @@
  * The Movico Framework
   * [AutoClassLoading Automatic Classloading]
   * [WritingBackingBeans Writing Backing Beans]
+  * [Navigation Navigation]
   * [ViewTemplating View Templating]
   * [ServiceBuilder Service Builder]
   * [Messages Messages]
