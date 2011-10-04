@@ -17,9 +17,9 @@ You can also specify how many milliseconds each AJAX request waits for its respo
 
 == The {{{ajaxLoading}}} element ==
 
-Because AJAX is asynchronous, it can sometimes take a while (depending on the server specs and the amount of work that needs to be done) before a response returns to the client. To give an indication to the user that the browser is waiting for a response, you can use the {{{ajaxLoading}}} element. This element will show a loading animation during each AJAX request. It has one parameter, {{{src}}}, that contains a _relative_ link to an image in the {{{view/img}}} folder.
+Because AJAX is asynchronous, it can sometimes take a while (depending on the server hardware, the network and the amount of work that needs to be done) before a response returns to the client. To give an indication to the user that the browser is waiting for a response, you can use the {{{ajaxLoading}}} element. This element will show a loading animation during each AJAX request. It has one parameter, {{{src}}}, that contains a _relative_ link to an image in the {{{view/img}}} folder.
 
-If {{{src}}} is not specified, a default image is used.
+If {{{src}}} is not specified, a default spinner image is used.
 
 {{{
 <view>
@@ -31,12 +31,11 @@ If {{{src}}} is not specified, a default image is used.
 </view>
 }}}
 
-If ajax is not enabled in the settings, the element will not render.
+If ajax is not enabled in the settings, this element will not render.
 
 
 = Limitations =
 
-  * Currently the File Upload is not working asynchronously. If you want to use this component, please use synchronous mode.
   * Currently the {{{ajax_enabled}}} property is used in all views. So for the moment, you cannot use synchronous mode for some pages and asynchronous mode for others. This will be changed in the future by allowing to override the default setting by adding an attribute to the {{{view}}} component
 
 = How does it work? =
