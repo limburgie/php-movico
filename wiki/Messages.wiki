@@ -1,4 +1,5 @@
 #summary Displaying bean-generated messages in your views
+#labels Featured
 
 = Introduction =
 
@@ -6,7 +7,7 @@ Usually when you have deployed some interactive forms inside your application, y
 
 In Movico's service layer, error handling should be done using *exceptions*. Ultimately, exceptions that are thrown inside the service layer should be caught inside your beans, because otherwise your end-users would be stuck with nothing but an ugly stacktrace.
 
-= !MessageUtil =
+= Use messages in beans =
 
 Movico provides a utility class, {{{MessageUtil}}}, which can be used from within your beans. {{{MessageUtil}}} has three static methods, conforming to the three *warning levels* you can disclose to your view:
  * {{{info}}} - Use this to inform users about something.
@@ -35,3 +36,20 @@ class LoginBean extends SessionBean {
 }
 ?>
 }}}
+
+= Show messages on views =
+
+Once you've generated messages inside your beans, it's time to display them on your views. Meet {{{<message/>}}}, a tag with no inner content and no attributes. Just use the {{{<message/>}}} tag wherever you want to display the message that was generated inside your bean.
+
+{{{
+<view>
+	<form>
+		<message/>
+		<inputText value="#{LoginBean.username}"/>
+		<inputSecret value="#{LoginBean.password}"/>
+		<commandButton action="#{LoginBean.login}" value="Login"/>
+	</form>
+</view>
+}}}
+
+The {{{<message/>}}} tag generates a {{{<div>}}} with classes {{{msg}}} and one of {{{info}}}, {{{error}}}, {{{success}}}. By default, it has a clearly separating styling.
