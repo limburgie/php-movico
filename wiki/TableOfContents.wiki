@@ -11,6 +11,7 @@
   * [WritingBackingBeans Writing Backing Beans]
   * [ViewTemplating View Templating]
   * [ServiceBuilder Service Builder]
+  * [Messages Messages]
   * [AjaxSupport Ajax Support]
  * Components
   * External files
