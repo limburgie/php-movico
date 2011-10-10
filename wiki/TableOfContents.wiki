@@ -22,7 +22,14 @@
   * Input components
    * [BooleanCheckbox booleanCheckbox]
    * [InputDate inputDate]
+   * [InputRichText inputRichText]
+   * [InputSecret inputSecret]
+   * [InputText inputText]
+   * [InputTextArea inputTextArea]
+   * [SelectManyListBox selectManyListBox]
+   * [SelectManyTransferListBox selectManyTransferListBox]
    * [SelectOneMenu selectOneMenu]
+   * [SelectOneRadio selectOneRadio]
   * Output components
    * [GoogleMaps googleMap]
  * Games
