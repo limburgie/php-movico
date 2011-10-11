@@ -32,6 +32,7 @@
    * [SelectOneRadio selectOneRadio]
   * Output components
    * [GoogleMaps googleMap]
+   * [OutputDate outputDate]
   * Other components
    * [FileBrowser fileBrowser]
  * Games
