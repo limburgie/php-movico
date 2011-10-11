@@ -32,6 +32,8 @@
    * [SelectOneRadio selectOneRadio]
   * Output components
    * [GoogleMaps googleMap]
+  * Other components
+   * [FileBrowser fileBrowser]
  * Games
   * [Boggle Boggle]
  * [AboutAuthor About the Author]
