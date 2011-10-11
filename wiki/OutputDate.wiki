@@ -1,0 +1,15 @@
+#summary Outputting formatted dates in your views
+
+= Introduction =
+
+The {{{outputDate}}} component will output a formatted Date object on your view.
+
+= Attributes =
+
+|| *Name* || *Required* || *Default* || *Description* ||
+|| *value* || yes || || Value expression corresponding to a Date object ||
+|| *format* || no || %c || Date format to output the date into. See the  [http://php.net/manual/en/function.strftime.php PHP manual] for available format identifiers ||
+
+= Examples =
+
+See the [InputDate inputDate] component for examples.
