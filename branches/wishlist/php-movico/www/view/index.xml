@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<composition xmlns="http://php-movi.co" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://php-movi.co view.xsd" template="main">
+	<define name="title">
+		<outputText value="Movico Examples"/>
+	</define>
+	<define name="body">
+		<outputText value="Please select an example on the left"/>
+	</define>
+</composition>
