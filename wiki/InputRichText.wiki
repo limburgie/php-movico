@@ -4,6 +4,8 @@
 
 This component will render a WYSIWYG editor for creating structured web content. This component is based on the [http://elrte.org/ elRTE] open source editor.
 
+http://php-movico.googlecode.com/files/Screen%20shot%202012-02-26%20at%2019.01.57.png
+
 = Attributes =
 
 || *Name* || *Required* || *Default* || *Description* ||
